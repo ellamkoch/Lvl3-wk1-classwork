@@ -1,0 +1,22 @@
+{
+  "name": "Lvl3-wk1-classwork",
+  "version": "1.0.0",
+  "description": "initial project to learn npm",
+  "homepage": "https://github.com/ellamkoch/Lvl3-wk1-classwork#readme",
+  "bugs": {
+    "url": "https://github.com/ellamkoch/Lvl3-wk1-classwork/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellamkoch/Lvl3-wk1-classwork.git"
+  },
+  "license": "MIT",
+  "author": "ellamkoch",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check:node": "node scripts/checkEnv.js hello-from-npm-script",
+    "dev": "live-server --port=3000"
+  }
+}
