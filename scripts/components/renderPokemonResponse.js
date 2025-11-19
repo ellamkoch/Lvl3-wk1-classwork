@@ -24,11 +24,12 @@ function renderPokemonResponse(apiResponse) {
 
 // builds and displays the poke card
     content.innerHTML = `
-    <div class="card">
+    <div class="card .bg-transparent">
     <img src="${pokemon.sprites.front_default}" class="card-img-top" alt="Sprite image of a ${pokemon.name}">
     <div class="card-body">
-    <h5 class="card-title">Name: ${pokemon.name} - ID: ${pokemon.id}</h5>
-    <ul class="list-group">
+    <h5 class="card-title text-center">Name: ${pokemon.name} - ID: ${pokemon.id}</h5>
+    <div class="card-body .bg-transparent">
+    <ul class="list-group ">
         <li class="list-group-item">Pokemon Weight: ${pokemon.weight}</li>
         <li class="list-group-item">Pokemon Height: ${pokemon.height}</li>
         <li class="list-group-item">Pokemon Types: ${typesString}</li>
