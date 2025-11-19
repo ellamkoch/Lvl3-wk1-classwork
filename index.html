@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Node and NPM</title>
+    <title>Learning Node and NPM with APIs</title>
+    <!-- bootstrap styles-->
+     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- styles-->
+     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-<h1>Learning Node && NPM</h1>
+<h1 class="text-center pt-5">Learning Node && NPM</h1>
+ <form class="mainForm d-flex justify-content-center flex-column align-items-center mt-4 mx-auto gap-4" id="mainForm">
+    <div class="mainForm__input">
+    <label for="pokemonSearchInput" class="pokemonSearch form-label">Search the PokeAPI for info about your favorite pokemon!</label>
+    <input type="text" name="pokemonSearch" id="pokemonSearchInput"  class="form-control" required placeholder="Enter Pokemon Name or ID">
+</div>
+
+    <button class="mainForm__submit btn btn-info" id="formSubmit" type="submit">Search for Pokemon</button>
+    </form>
+
+<!--container for results and content. -->
+<div id="content" class="content mt-4 d-flex w-75 mx-auto align-items-center justify-content-center pt-3"></div>
+
+
+
+<!-- dependency scripts-->
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./node_modules/lodash/lodash.min.js"></script>
+
+<!-- include main.js-->
+ <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
