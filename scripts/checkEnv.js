@@ -1,4 +1,5 @@
-// small node.js script used only in the terminal. its job is to verify the environment and to show students how 'node' executes js files
+// small node.js script used only in the terminal. its job is to verify the
+// environment and to show students how 'node' executes js files
 
 console.log ("=== Node.js environment check ===");
 
