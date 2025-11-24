@@ -16,26 +16,26 @@ const contentText = document.getElementById("content-text");
 
 // Event listener for submit button
 mainForm.addEventListener("submit", async (e) => { // need async here for it to load the await.
-  // prevent default refresh action
-  e.preventDefault();
+    // prevent default refresh action
+    e.preventDefault();
 
-  // validate the input
-  const searchValue= searchInput.value.trim();// trim gets rid of extra spaces user may put in
+    // validate the input
+    const searchValue= searchInput.value.trim();// trim gets rid of extra spaces user may put in
 
-  if (searchValue.length > 0) {
+    if (searchValue.length > 0) {
     // make the loader before the api call, then remove the loader w/ an api response
-    content.innerHTML = `
+        content.innerHTML = `
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
     `;
-    content.innerHTML = ""; //clears previous cards loaded
+        content.innerHTML = ""; //clears previous cards loaded
 
-    const pokemonResponse = await getPokemonAPI(String(searchValue)); // fetches data from the api
+        const pokemonResponse = await getPokemonAPI(String(searchValue)); // fetches data from the api
 
 
 
-    renderPokemonResponse(pokemonResponse);// calls function to display results or error.
-  }
+        renderPokemonResponse(pokemonResponse);// calls function to display results or error.
+    }
 });
 contentText.style.display ="none"; // hides the please search line in the html
