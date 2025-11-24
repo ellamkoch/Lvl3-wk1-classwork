@@ -1,13 +1,14 @@
-// this file renders the pokemon card onto the page after the search
+//file renders pokemon card onto the page after the search
 //Variables - gets the content container from the DOM
 const content = document.getElementById("content");
 
 function renderPokemonResponse(apiResponse) {
- if(apiResponse.success) {
+  if(apiResponse.success) {
     // displays pokemon name if successfully calling the api
-   const pokemon = apiResponse.data;
+    const pokemon = apiResponse.data;
 
-   const typesArray =pokemon.types; //pulls "types" array from the api and stores the array data for use later
+    const typesArray =pokemon.types; //pulls "types" array
+    // from the api and stores the array data for use later
     // let typesString=''; how to do a forEach method
 
     // console.log(typesArray);
@@ -20,9 +21,9 @@ function renderPokemonResponse(apiResponse) {
     //     if(index < typesArray.length -1) {
     //         typesString += ', ';
     //     }
-    const typesString = typesArray.map(type => type.type.name).join(', '); // gets the pokemon type names in the array and joins them with a comma
+    const typesString = typesArray.map(type => type.type.name).join(", "); // gets the pokemon type names in the array and joins them with a comma
 
-// builds and displays the poke card
+    // builds and displays the poke card
     content.innerHTML = `
     <div class="card .bg-transparent">
     <img src="${pokemon.sprites.front_default}" class="card-img-top" alt="Sprite image of a ${pokemon.name}">
@@ -36,13 +37,13 @@ function renderPokemonResponse(apiResponse) {
     </ul>
     </div>
     </div>
-    `
- } else {
+    `;
+  } else {
     // error message displayed if there's a bad response from the api
-    const {error} = apiResponse;
+    const { error } = apiResponse;
     content.innerHTML = `
-    <h2>API Failed because of ${error.message}</h2>`
- }
+    <h2>API Failed because of ${error.message}</h2>`;
+  }
 }
- // enables export to other files. only function to export, so we can list it this way
- export default renderPokemonResponse;
+// enables export to other files. only function to export, so we can list it this way
+export default renderPokemonResponse;
