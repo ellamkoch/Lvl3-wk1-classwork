@@ -1,0 +1,74 @@
+/*custom title font, free pokemon replica font - https://www.fontbolt.com/font/pokemon-font/*/
+@font-face {
+    font-family: 'PokemonSolid';
+    src: url('../Fonts/Pokemon_Solid.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title {
+  font-family: 'PokemonSolid', sans-serif;
+  font-size: 4rem;
+  color: #ffcb05;
+  -webkit-text-stroke: 2px #4e5fdc;
+  text-shadow: 3px 3px 6px rgba(234, 212, 212, 0.631);
+  letter-spacing: 5px;
+
+}
+
+.mainForm {
+  width: 600px;
+}
+
+/* global styles*/
+body {
+    background: linear-gradient(180deg, #3d3d3d 0%, #a72727 100%);
+    background-attachment: fixed;
+    font-family: Roboto, sans-serif;
+    color: #ffcb05;
+    margin: 0;
+    padding: 0;
+}
+
+#pokemonSearchInput {
+font-size: 1.1rem;
+transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* submit button styles*/
+.mainForm__submit {
+  color: #ffd505;
+}
+
+.mainForm__submit:hover { background: #2563eb; }
+.mainForm__submit:active { transform: translateY(1px); }
+
+/* Pokemon Card Styles */
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(238, 237, 237, 0.607);
+}
+
+#content-text {
+  color: #ffdb72;
+
+}
+.card-title {
+  color: #ffdb72;
+}
+/* .card-body {
+   background: rgba(255,255,255,0.08)
+} */
+
+.list-group {
+    list-style-type: none;
+    /* background: rgba(255,255,255,0.08); */
+     color: #ffdb72;
+ }
+
+ .list-group-item {
+  background: rgba(255,255,255,0.08);
+  color: #ffdb72;
+  border-color:  rgba(255,255,255,0.08);
+ }

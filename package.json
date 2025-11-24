@@ -18,5 +18,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:node": "node scripts/checkEnv.js hello-from-npm-script",
     "dev": "live-server --port=3000"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bootstrap": "^5.3.8",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0"
   }
 }
