@@ -118,7 +118,7 @@ module.exports = [
       "prefer-rest-params": "warn",         // Use rest parameters
 
       // ----- Formatting & Style (Indentation, Semicolons) -----
-      "indent": ["error", 2, {              // 2-space indentation
+      "indent": ["error", 4, {              // 4-space indentation
         "SwitchCase": 1,
         "VariableDeclarator": 1,
         "outerIIFEBody": 1,
@@ -148,7 +148,7 @@ module.exports = [
       "complexity": ["warn", 10],          // Max cyclomatic complexity
       "max-depth": ["warn", 4],            // Max nesting depth
       "max-len": ["warn", {                // Max line length
-        "code": 100,
+        "code": 150,
         "ignoreUrls": true,
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true,
